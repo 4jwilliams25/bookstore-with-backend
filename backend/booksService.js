@@ -29,3 +29,8 @@ exports.deleteBook = id => {
 
   return deletedBook;
 };
+
+exports.addBook = newBook => {
+  newBook.id = books.length + 1;
+  books.push(newBook);
+};

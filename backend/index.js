@@ -35,4 +35,8 @@ app.delete("/api/books/delete/:id", (req, res) => {
   res.json(booksService.deleteBook(Number(req.params.id)));
 });
 
+app.post("/api/books", (req, res) => {
+  res.json(booksService.addBook(req.body));
+});
+
 app.listen(port, () => console.log("Listening at port 8082"));
